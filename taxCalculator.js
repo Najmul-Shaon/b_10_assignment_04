@@ -4,7 +4,7 @@ function calculateTax(income, cost) {
     isNaN(cost) ||
     0 >= income ||
     0 >= cost ||
-    cost >= income
+    cost > income
   ) {
     return "Invalid String";
   } else {
@@ -15,6 +15,6 @@ function calculateTax(income, cost) {
 }
 
 const monthly_income = 5000;
-const monthly_cost = 1500;
+const monthly_cost = -2000;
 const result = calculateTax(monthly_income, monthly_cost);
 console.log(result);
